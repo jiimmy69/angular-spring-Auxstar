@@ -1,0 +1,72 @@
+<div style="margin-top: 20px; margin-left: 35%; "     >
+<h3>Create Employee</h3>
+<div [hidden]="submitted" style="width: 400px; margin-top: 3%;">
+  <form (ngSubmit)="onSubmit()">
+    
+    <div class="form-group" >
+      
+      <label for="name">Nom et Prenom</label>
+      <input type="text" class="form-control" id="nom" required [(ngModel)]="employee.nom" name="nom" placeholder="Saisir le Nom et Prenom">
+    </div>
+
+    
+
+    <div class="form-group">
+        <label for="name">Email</label>
+        <input type="text" class="form-control" id="email" required [(ngModel)]="employee.email" name="email" placeholder="Saisir l'Email email@example.com">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Salaire</label>
+        <input type="text" class="form-control" id="salaire" required [(ngModel)]="employee.salaire" name="salaire" placeholder="Saisir le Salaire">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Phone</label>
+        <input type="text" class="form-control" id="tel" required [(ngModel)]="employee.tel" name="tel" placeholder="Saisir le Numero">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Post</label>
+        <input type="text" class="form-control" id="post" required [(ngModel)]="employee.post" name="post" placeholder="Saisir le Post">
+      </div>
+      
+    <div class="form-group">
+      <label for="name">Date de naissance</label>
+      <input type="text" class="form-control" id="age" required [(ngModel)]="employee.age" name="age" placeholder="Saisir le Date de naissance (DD/MM/YYYY)">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Adresse</label>
+      <input type="text" class="form-control" id="adresse" required [(ngModel)]="employee.adresse" name="adresse"placeholder="Saisir l'adresse">
+    </div>
+    
+    <br>
+
+    <div class="form-group">
+      <label for="name" >Gender</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="homme" id="homme" value="homme" required [(ngModel)]="employee.gender">
+        <label class="form-check-label" for="flexRadioDisabled">
+          Homme
+        </label>
+      </div>
+      
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="femme" id="femme" value="femme" required [(ngModel)]="employee.gender">
+        <label class="form-check-label" for="flexRadioCheckedDisabled">
+          Femme
+        </label>
+      </div>
+    </div>
+
+    <div>
+      
+    </div>
+<div>
+    <button class="btn btn-primary">Confirmer</button>
+    <button type="reset" class="btn btn-secondery">Cancel</button>
+</div>
+</form>
+</div>
+</div>

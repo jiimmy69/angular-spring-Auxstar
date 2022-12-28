@@ -1,0 +1,44 @@
+<div class="panel panel-primary"  style="margin-top: 20px; margin-right: 35%; " >
+  <div class="panel-heading "style="margin-top: 20px; margin-left: 40%;" >
+    <h2 style="margin-left: 50%; "> List des Taches   </h2>
+      
+      
+  
+
+      <br>
+    </div>
+    <div class="table-responsive" style="margin-left: 30%;margin-top: 5%;">
+      <table class="table align-middle" >
+
+        <thead>
+          <tr>
+            <th >ID</th>
+            <th >Name</th>
+            <th >Date debut</th>
+            <th >Date fin</th>
+            <th >Responsable</th>
+            <th >Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Userr of tchh ">
+            <td>{{Userr.id}}</td>
+            <td>{{Userr.nom}}</td>
+            <td>{{Userr.date_debut}}</td>
+            <td>{{Userr.date_fin}}</td>
+            <td>{{Userr.responsable}}</td>
+            
+            
+              <td>
+                <button style='margin-right:16px' (click)="deleteTache(Userr.id)" class="btn btn-danger">Delete</button>
+                <button style='margin-right:16px' (click)="updateTache(Userr.id)" class="btn btn-primary" style="margin-left: 10px">Edit details</button>
+              </td>
+            
+            
+
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

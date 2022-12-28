@@ -1,0 +1,60 @@
+<div class="panel panel-primary"  style="margin-top: 20px; " >
+    <div class="panel-heading " >
+      <h2 style="margin-left: 40%; "> List des Employees   </h2>
+      
+      
+<datalist id="datalistOptions">
+  <option value="1">
+  <option value="2">
+  <option value="3">
+  
+</datalist>
+      <br>
+    </div>
+    <div class="table-responsive" style="margin-top: 5%;">
+      
+      
+      
+      <table class="table align-middle" style="margin-top: 1%;">
+
+        <thead>
+          <tr>
+            <th >ID</th>
+            <th >Name</th>
+            <th >Email</th>
+            <th >Salaire</th>
+            <th >Phone</th>
+            <th >Post</th>
+            <th >Age</th>
+            <th >Adresse</th>
+            <th >Gender</th>
+            <th >Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let User of emp ">
+            <td>{{User.id}}</td>
+            <td>{{User.nom}}</td>
+            <td>{{User.email}}</td>
+            <td>{{User.salaire}}</td>
+            <td>{{User.tel}}</td>
+            <td>{{User.post}}</td>
+            <td>{{User.age}}</td>
+            <td>{{User.adresse}}</td>
+            <td>{{User.gender}}</td>
+            
+              <td>
+                <button style='margin-right:16px' (click)="updateEmployee(User.id)" class="btn btn-primary" >Edit details</button>
+                <button style='margin-right:16px' (click)="deleteEmployee(User.id)" class="btn btn-danger">Delete</button>
+                
+              </td>
+            
+            
+
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+ 
